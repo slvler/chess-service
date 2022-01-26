@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/qwerty/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/qwerty/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/qwerty/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/qwerty/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/facade/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/facade/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/facade/ignition-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/qwerty/vendor/sebastian/code-unit" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
