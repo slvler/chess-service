@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title' ,
+        'keyword',
+        'author',
+        'analytics',
+        'metrica',
+        'facebook',
+        'instagram',
+        'twitter',
+        'pinterest',
+        'youtube',
+        'status'
+    ];
+
 }

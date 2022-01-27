@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
@@ -13,6 +14,9 @@ class SettingController extends Controller
      */
     public function index()
     {
+        $setting = Setting::findOrFail(1);
+        $title = "Genel Ayarlar";
+        return view('admin.setting.index', ['setting' => $setting, 'title' => $title]);
         //
     }
 
@@ -68,6 +72,58 @@ class SettingController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $section = $request->input('section');
+        $setting = Setting::findOrFail($id);
+
+        if ($section == 1)
+        {
+            $setting->status = $request->status;
+            $setting->title = $request->title;
+            $setting->keyword = $request->keyword;
+            $setting->description = $request->description;
+            $setting->author = $request->author;
+            $setting->analytics = $request->analytics;
+            $setting->metrica = $request->metrica;
+            $setting->facebook = $setting->facebook;
+            $setting->instagram = $setting->instagram;
+            $setting->twitter = $setting->twitter;
+            $setting->pinterest = $setting->pinterest;
+            $setting->youtube = $setting->youtube;
+        }else{
+
+
+            $setting->title = $setting->title;
+            $setting->keyword = $setting->keyword;
+            $setting->description = $setting->description;
+            $setting->author = $setting->author;
+            $setting->analytics = $setting->analytics;
+            $setting->metrica = $setting->metrica;
+            $setting->status = $setting->status;
+
+            $setting->facebook = $request->facebook;
+            $setting->instagram = $request->instagram;
+            $setting->twitter = $request->twitter;
+            $setting->pinterest = $request->pinterest;
+            $setting->youtube = $request->youtube;
+
+        }
+
+
+
+
+
+
+
+        $update = $setting->save();
+
+        if ($update)
+        {
+            return back()->with('success','Ayarlar Başarıyla Güncellendi');
+        }else {
+            return back()->with('fail','Ayarlar Güncelleme Hatası');
+        }
+
         //
     }
 

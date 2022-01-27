@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SubmenuController;
@@ -12,6 +13,7 @@ use \App\Http\Controllers\SubcategoryController;
 
 
 use \App\Http\Controllers\SliderController;
+use  \App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,4 +78,9 @@ Route::put('/slideradminimage/{id}', [SliderController::class, 'image'])->name('
 Route::delete('/slideradmindestroy/{id}', [SliderController::class, 'destroy'])->name('slideradmindestroy');
 
 
-Route::get('/settingadmin', [SliderController::class, 'index'])->name('settingadmin');
+Route::get('/settingadmin', [SettingController::class, 'index'])->name('settingadmin');
+Route::put('/settingadminupdate/{id}', [SettingController::class, 'update'])->name('settingadminupdate');
+
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/check', [LoginController::class, 'check'])->name('check');
