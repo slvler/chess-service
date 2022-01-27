@@ -8,6 +8,7 @@
 @stop
 
 @section('content')
+
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -36,7 +37,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Ekleme Formu</h3>
+                                <h3 class="card-title">Slider Görsel Güncelleme Formu</h3>
                             </div>
 
                             @if ($errors->any())
@@ -63,44 +64,29 @@
                         @endif
                         <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('categoryadminstore') }}" method="post">
+                            <form action="{{ route('slideradminimage', $slider->id) }}" method="post" enctype="multipart/form-data">
                                 @csrf
-                                @method('POST')
+                                @method('PUT')
                                 <div class="card-body">
 
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Başlık</label>
-                                        <input name="title" type="text" value="{{ Request::old('title') }}" class="form-control" >
+                                    <div class="form-group" style=" text-align: center">
+                                        <label style="display: block" for="exampleInputEmail1">Mecvut Görsel</label>
+                                        <img style="display: inline-block;" width="350" src="{{ asset('images/') }}/{{ $slider->image }}" alt="">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Açıklama</label>
-                                        <input name="body" type="text" value="{{ Request::old('body') }}" class="form-control">
-                                    </div>
 
                                     <div class="form-group">
-                                        <label>Detay</label>
-                                        <textarea name="detail" class="form-control" rows="3">{{ Request::old('detail') }}</textarea>
+                                        <label for="exampleInputEmail1">Dosya</label>
+                                        <input name="image" type="file" class="form-control" >
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Keyword</label>
-                                        <input name="keyword" type="text" value="{{ Request::old('keyword') }}" class="form-control">
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label>Durum</label>
-                                        <select name="status"  class="form-control">
-                                            <option></option>
-                                            <option value="0">Disable</option>
-                                            <option value="1">Active</option>
-                                        </select>
-                                    </div>
+
                                 </div>
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-right">Kategori Ekle</button>
+                                    <button type="submit" class="btn btn-primary float-right">Slider Görsel Güncelleme</button>
                                 </div>
                             </form>
                         </div>
@@ -122,6 +108,7 @@
         </section>
         <!-- /.content -->
     </div>
+
 
 @stop
 

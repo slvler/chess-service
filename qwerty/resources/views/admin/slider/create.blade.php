@@ -36,7 +36,9 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Ekleme Formu</h3>
+                                <h3 class="card-title">Slider Ekleme Formu</h3>
+
+
                             </div>
 
                             @if ($errors->any())
@@ -63,10 +65,15 @@
                         @endif
                         <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('categoryadminstore') }}" method="post">
+                            <form action="{{ route('slideradminstore') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('POST')
                                 <div class="card-body">
+
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Dosya</label>
+                                        <input name="image" type="file" class="form-control" >
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Başlık</label>
@@ -79,11 +86,6 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Detay</label>
-                                        <textarea name="detail" class="form-control" rows="3">{{ Request::old('detail') }}</textarea>
-                                    </div>
-
-                                    <div class="form-group">
                                         <label for="exampleInputPassword1">Keyword</label>
                                         <input name="keyword" type="text" value="{{ Request::old('keyword') }}" class="form-control">
                                     </div>
@@ -92,15 +94,17 @@
                                         <label>Durum</label>
                                         <select name="status"  class="form-control">
                                             <option></option>
-                                            <option value="0">Disable</option>
-                                            <option value="1">Active</option>
+                                            <option value="0">Pasif</option>
+                                            <option value="1">Aktif</option>
+
                                         </select>
                                     </div>
+
                                 </div>
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-right">Kategori Ekle</button>
+                                    <button type="submit" class="btn btn-primary float-right">Slider Ekle</button>
                                 </div>
                             </form>
                         </div>
@@ -122,6 +126,7 @@
         </section>
         <!-- /.content -->
     </div>
+
 
 @stop
 

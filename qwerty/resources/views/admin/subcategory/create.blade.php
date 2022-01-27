@@ -36,7 +36,9 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Ekleme Formu</h3>
+                                <h3 class="card-title">{{ $title }}</h3>
+
+
                             </div>
 
                             @if ($errors->any())
@@ -63,7 +65,7 @@
                         @endif
                         <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('categoryadminstore') }}" method="post">
+                            <form action="{{ route('subcategoryadminstore', request()->segment(2)) }}" method="post">
                                 @csrf
                                 @method('POST')
                                 <div class="card-body">
@@ -94,13 +96,15 @@
                                             <option></option>
                                             <option value="0">Disable</option>
                                             <option value="1">Active</option>
+
                                         </select>
                                     </div>
+
                                 </div>
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-right">Kategori Ekle</button>
+                                    <button type="submit" class="btn btn-primary float-right">Altkategori Ekle</button>
                                 </div>
                             </form>
                         </div>
@@ -122,6 +126,7 @@
         </section>
         <!-- /.content -->
     </div>
+
 
 @stop
 

@@ -8,7 +8,6 @@
 @stop
 
 @section('content')
-
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -49,7 +48,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title"></h3>
-                                <a href="{{ route('categoryadmincreate') }}"><button class="btn btn-primary">Kategori Ekle</button></a>
+                                <a href="{{ route('slideradmincreate') }}"><button class="btn btn-primary">Slider Ekle</button></a>
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
@@ -69,27 +68,28 @@
                                     <thead>
                                     <tr>
                                         <th>Sıra</th>
+                                        <th>Görsel</th>
                                         <th>Başlık</th>
                                         <th>Açıklama</th>
-                                        <th>Detay</th>
                                         <th>Durum</th>
                                         <th>İşlemler</th>
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($category as $k)
+
+
+                                    @foreach($slider as $s)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $k->title }}</td>
-                                            <td>{{ $k->body }}</td>
-                                            <td>{{ $k->detail }}</td>
-                                            <td>{{ $k->status }}</td>
+                                            <td><img width="150" src="{{ asset('images/') }}/{{ $s->image }}" alt=""></td>
+                                            <td>{{ $s->title }}</td>
+                                            <td>{{ $s->body }}</td>
+                                            <td>{{ $s->status }}</td>
                                             <td>
-                                                <a  href="{{ route('categoryadminedit', $k->id) }}"><button class="btn btn-success btn-xs">Güncelleme</button></a>
-                                                <a  href="{{ route('subcategoryadmin', $k->id) }}"><button class="btn btn-dark btn-xs">Alt Menü</button></a>
-
-                                                <form style="display: inline-block !important;" action="{{ route('categoryadmindestroy', $k->id) }}" method="post">
+                                                <a  href="{{ route('slideradminedit', $s->id) }}"><button class="btn btn-success btn-xs">Güncelleme</button></a>
+                                                <a  href="{{ route('slideradmingallery', $s->id) }}"><button class="btn btn-dark btn-xs">Galeri</button></a>
+                                                <form style="display: inline-block !important;" action="{{ route('slideradmindestroy', $s->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger btn-xs">Sİl</button>
@@ -119,10 +119,6 @@
         </section>
         <!-- /.content -->
     </div>
-
-
-
-
 @stop
 
 @section('js')
