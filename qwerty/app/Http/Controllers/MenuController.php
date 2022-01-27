@@ -128,6 +128,47 @@ class MenuController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $validator = Validator::make($request->all(),
+            [
+                'title' => 'required',
+                'body' => 'required',
+                'detail' => 'required',
+                'keyword' => 'required',
+                'status' => 'required',
+            ],
+            [
+                'title.required' => 'Başlık Boş Bırakılamaz',
+                'body.required' => 'Açıklama Boş Bırakılamaz',
+                'detail.required' => 'Detay Boş Bırakılamaz',
+                'keyword.required' => 'Keyword Boş Bırakılamaz',
+                'status.required' => 'Durum Boş Bırakılamaz'
+            ]
+
+
+        );
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+
+        $menu = Menu::findorfail($id);
+
+        $menu->title = $request->title;
+        $menu->body = $request->body;
+        $menu->detail = $request->detail;
+        $menu->keyword = $request->keyword;
+        $menu->status = $request->status;
+
+        $save = $menu->save();
+
+        if ($save)
+        {
+            return back()->with('success','Menü Başarıyla Güncellendi');
+        }else {
+            return back()->with('fail','Menü Güncelleme Hatası');
+        }
         //
     }
 
@@ -140,5 +181,25 @@ class MenuController extends Controller
     public function destroy($id)
     {
         //
+        try {
+
+            $menu = Menu::find($id);
+            $delete = $menu->delete();
+
+            if ($delete)
+            {
+                return back()->with('success','Menü Başarıyla Silindi');
+            }else {
+                return back()->with('fail','Menü Silme Hatası');
+            }
+
+        } catch (\Exception $exception) {
+
+            \Log::error($exception);
+
+            return redirect()->back()->with(['fail' => 'There was an error']);
+        }
+
+
     }
 }

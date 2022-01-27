@@ -66,7 +66,7 @@
                         @endif
                         <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('menuAdminUpdate', $menu->id) }}" method="post">
+                            <form action="{{ route('menuadminupdate', $menu->id) }}" method="post">
                                 @csrf
                                 @method('PUT')
                                 <div class="card-body">
@@ -94,9 +94,15 @@
                                     <div class="form-group">
                                         <label>Durum</label>
                                         <select name="status"  class="form-control">
-                                            <option></option>
-                                            <option value="0">Disable</option>
-                                            <option value="1">Active</option>
+                                            @if($menu->status == 0)
+                                                <option value="0">Pasif</option>
+                                                <option value="1">Aktif</option>
+                                            @else
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Pasif</option>
+
+                                            @endif
+
 
                                         </select>
                                     </div>
@@ -105,7 +111,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-right">Menü Ekle</button>
+                                    <button type="submit" class="btn btn-primary float-right">Menü Güncelle</button>
                                 </div>
                             </form>
                         </div>

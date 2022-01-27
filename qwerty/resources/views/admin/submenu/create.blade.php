@@ -1,7 +1,7 @@
 @extends('admin.main')
 
 @section('title')
-{{ $title }}
+    {{ $title }}
 @stop
 
 @section('css')
@@ -37,7 +37,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Menu Ekleme Formu</h3>
+                                <h3 class="card-title">{{ $title }}</h3>
 
 
                             </div>
@@ -64,9 +64,9 @@
                                     {{ Session::get('fail') }}
                                 </div>
                         @endif
-                            <!-- /.card-header -->
+                        <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('menuadminstore') }}" method="post">
+                            <form action="{{ route('submenuadminstore', request()->segment(2)) }}" method="post">
                                 @csrf
                                 @method('POST')
                                 <div class="card-body">
@@ -105,7 +105,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-right">Menü Ekle</button>
+                                    <button type="submit" class="btn btn-primary float-right">Altmenü Ekle</button>
                                 </div>
                             </form>
                         </div>

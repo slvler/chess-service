@@ -78,7 +78,7 @@
 
         <li class="nav-header">Listeler</li>
         <li class="nav-item">
-            <a href="{{ route('menuAdmin') }}" class="nav-link">
+            <a href="{{ route('menuadmin') }}" class="nav-link">
                 <i class="nav-icon fa fa-list"></i>
                 <p>
                     Menüler
@@ -87,7 +87,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('categoryadmin') }}" class="nav-link">
                 <i class="nav-icon fa fa-list"></i>
                 <p>
                     Kategoriler

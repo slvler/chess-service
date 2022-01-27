@@ -1,15 +1,13 @@
 @extends('admin.main')
 
 @section('title')
-    Menu Listesi
+    Altmenü Listesi
 @stop
 
 @section('css')
-
 @stop
 
 @section('content')
-
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -50,7 +48,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title"></h3>
-                                <a href="{{ route('menuadmincreate') }}"><button class="btn btn-primary">Menü Ekle</button></a>
+                                <a href="{{ route('submenuadmincreate', request()->segment(2)) }}"><button class="btn btn-primary">Altmenü Ekle</button></a>
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
@@ -81,24 +79,22 @@
 
 
 
-                                    @foreach($menu as $m)
-                                    <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $m->title }}</td>
-                                        <td>{{ $m->body }}</td>
-                                        <td>{{ $m->detail }}</td>
-                                        <td>{{ $m->status }}</td>
-                                        <td>
-                                            <a  href="{{ route('menuadminedit', $m->id) }}"><button class="btn btn-success btn-xs">Güncelleme</button></a>
-                                            <a  href="{{ route('submenuadmin', $m->id) }}"><button class="btn btn-dark btn-xs">Alt Menü</button></a>
-
-                                            <form style="display: inline-block !important;" action="{{ route('menuadmindestroy', $m->id) }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger btn-xs">Sİl</button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    @foreach($submenu as $m)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $m->title }}</td>
+                                            <td>{{ $m->body }}</td>
+                                            <td>{{ $m->detail }}</td>
+                                            <td>{{ $m->status }}</td>
+                                            <td>
+                                                <a  href="{{ route('submenuadminedit', $m->id) }}"><button class="btn btn-success btn-xs">Güncelleme</button></a>
+                                                <form style="display: inline-block !important;" action="{{ route('submenuadmindestroy', $m->id) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger btn-xs">Sİl</button>
+                                                </form>
+                                            </td>
+                                        </tr>
                                     @endforeach
 
                                     </tbody>
@@ -122,9 +118,7 @@
         </section>
         <!-- /.content -->
     </div>
-
 @stop
 
 @section('js')
-
 @stop

@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
+
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SubmenuController;
+
+use \App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +29,19 @@ Route::get('/', function () {
 
 Route::get('/admin', [AdminController::class, 'index']);
 
-Route::get('/menuAdmin', [MenuController::class, 'index'])->name('menuAdmin');
-Route::get('/menuAdminCreate', [MenuController::class, 'create'])->name('menuAdminCreate');
-Route::post('/menuAdminStore', [MenuController::class, 'store'])->name('menuAdminStore');
-Route::get('/menuAdminEdit/{id}', [MenuController::class, 'edit'])->name('menuAdminEdit');
-Route::put('/menuAdminUpdate/{id}', [MenuController::class, 'update'])->name('menuAdminUpdate');
+Route::get('/menuadmin', [MenuController::class, 'index'])->name('menuadmin');
+Route::get('/menuadmincreate', [MenuController::class, 'create'])->name('menuadmincreate');
+Route::post('/menuadminstore', [MenuController::class, 'store'])->name('menuadminstore');
+Route::get('/menuadminedit/{id}', [MenuController::class, 'edit'])->name('menuadminedit');
+Route::put('/menuadminupdate/{id}', [MenuController::class, 'update'])->name('menuadminupdate');
+Route::delete('/menuadmindestroy/{id}', [MenuController::class, 'destroy'])->name('menuadmindestroy');
 
 
+Route::get('/submenuadmin/{id}', [SubmenuController::class, 'index'])->name('submenuadmin');
+Route::get('/submenuadmincreate/{id}', [SubmenuController::class, 'create'])->name('submenuadmincreate');
+Route::post('/submenuadminstore/{id}', [SubmenuController::class, 'store'])->name('submenuadminstore');
+Route::get('/submenuadminedit/{id}', [SubmenuController::class, 'edit'])->name('submenuadminedit');
+Route::put('/submenuadminupdate/{id}', [SubmenuController::class, 'update'])->name('submenuadminupdate');
+Route::delete('/submenuadmindestroy/{id}', [SubmenuController::class, 'destroy'])->name('submenuadmindestroy');
+
+Route::get('/categoryadmin', [CategoryController::class, 'index'])->name('categoryadmin');

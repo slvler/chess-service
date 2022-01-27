@@ -1,7 +1,6 @@
 @extends('admin.main')
 
 @section('title')
-{{ $title }}
 @stop
 
 @section('css')
@@ -37,7 +36,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Menu Ekleme Formu</h3>
+                                <h3 class="card-title">{{ $title }}</h3>
 
 
                             </div>
@@ -64,39 +63,45 @@
                                     {{ Session::get('fail') }}
                                 </div>
                         @endif
-                            <!-- /.card-header -->
+                        <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('menuadminstore') }}" method="post">
+                            <form action="{{ route('submenuadminupdate', $submenu->id) }}" method="post">
                                 @csrf
-                                @method('POST')
+                                @method('PUT')
                                 <div class="card-body">
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Başlık</label>
-                                        <input name="title" type="text" value="{{ Request::old('title') }}" class="form-control" >
+                                        <input name="title" type="text" value="{{ $submenu->title }}" class="form-control" >
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Açıklama</label>
-                                        <input name="body" type="text" value="{{ Request::old('body') }}" class="form-control">
+                                        <input name="body" type="text" value="{{ $submenu->body }}" class="form-control">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Detay</label>
-                                        <textarea name="detail" class="form-control" rows="3">{{ Request::old('detail') }}</textarea>
+                                        <textarea name="detail" class="form-control" rows="3">{{ $submenu->detail }}</textarea>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Keyword</label>
-                                        <input name="keyword" type="text" value="{{ Request::old('keyword') }}" class="form-control">
+                                        <input name="keyword" type="text" value="{{ $submenu->keyword }}" class="form-control">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Durum</label>
                                         <select name="status"  class="form-control">
-                                            <option></option>
-                                            <option value="0">Disable</option>
-                                            <option value="1">Active</option>
+                                            @if($submenu->status == 0)
+                                                <option value="0">Pasif</option>
+                                                <option value="1">Aktif</option>
+                                            @else
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Pasif</option>
+
+                                            @endif
+
 
                                         </select>
                                     </div>
@@ -105,7 +110,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-right">Menü Ekle</button>
+                                    <button type="submit" class="btn btn-primary float-right">Altmenü Güncelle</button>
                                 </div>
                             </form>
                         </div>
@@ -127,7 +132,6 @@
         </section>
         <!-- /.content -->
     </div>
-
 
 @stop
 
