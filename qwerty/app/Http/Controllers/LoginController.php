@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Hash;
-use Illuminate\Support\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 
 use App\Models\Login;
 
@@ -23,10 +24,12 @@ class LoginController extends Controller
     {
 
 
+
         $request->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
+
 
         $user = Login::where('email','=', $request->email)->first();
 
@@ -44,4 +47,16 @@ class LoginController extends Controller
             }
         }
     }
+
+
+
+    public function logout()
+    {
+        if (session()->has('logUser'))
+        {
+            session()->pull('logUser');
+            return redirect('/login');
+        }
+    }
+
 }

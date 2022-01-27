@@ -5,7 +5,7 @@
 
         <li class="nav-header">Genel</li>
         <li class="nav-item">
-            <a href="{{ route('settingadmin') }}" class="nav-link {{ Route::is('setting') ? 'active' : '' }}">
+            <a href="{{ route('settingadmin') }}" class="nav-link {{ Route::is('settingadmin') ? 'active' : '' }}">
                 <i class="nav-icon fa fa-cog"></i>
                 <p>
                     Ayarlar

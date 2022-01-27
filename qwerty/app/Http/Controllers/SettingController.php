@@ -14,10 +14,13 @@ class SettingController extends Controller
      */
     public function index()
     {
+
         $setting = Setting::findOrFail(1);
+
         $title = "Genel Ayarlar";
         return view('admin.setting.index', ['setting' => $setting, 'title' => $title]);
         //
+
     }
 
     /**
