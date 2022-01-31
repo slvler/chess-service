@@ -22,11 +22,8 @@ class CreateSubmenusTable extends Migration
             $table->text('detail');
             $table->string('keyword', 255);
             $table->tinyInteger('status')->default(0);
+            $table->string('seo_url',225);
             $table->timestamps();
-            $table->foreign('menu_id')
-                ->references('id')
-                ->on('menus')
-                ->onDelete('cascade');
         });
 
 
