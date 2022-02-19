@@ -192,105 +192,10 @@
                             <!--begin::Toolbar-->
                             <div class="d-flex justify-content-end" data-kt-subscription-table-toolbar="base">
                                 <!--begin::Filter-->
-                                <button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                    <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                                    <span class="svg-icon svg-icon-2">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black" />
-													</svg>
-												</span>
-                                    <!--end::Svg Icon-->Filter</button>
-                                <!--begin::Menu 1-->
-                                <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
-                                    <!--begin::Header-->
-                                    <div class="px-7 py-5">
-                                        <div class="fs-5 text-dark fw-bolder">Filter Options</div>
-                                    </div>
-                                    <!--end::Header-->
-                                    <!--begin::Separator-->
-                                    <div class="separator border-gray-200"></div>
-                                    <!--end::Separator-->
-                                    <!--begin::Content-->
-                                    <div class="px-7 py-5" data-kt-subscription-table-filter="form">
-                                        <!--begin::Input group-->
-                                        <div class="mb-10">
-                                            <label class="form-label fs-6 fw-bold">Month:</label>
-                                            <select class="form-select form-select-solid fw-bolder" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="month" data-hide-search="true">
-                                                <option></option>
-                                                <option value="jan">January</option>
-                                                <option value="feb">February</option>
-                                                <option value="mar">March</option>
-                                                <option value="apr">April</option>
-                                                <option value="may">May</option>
-                                                <option value="jun">June</option>
-                                                <option value="jul">July</option>
-                                                <option value="aug">August</option>
-                                                <option value="sep">September</option>
-                                                <option value="oct">October</option>
-                                                <option value="nov">November</option>
-                                                <option value="dec">December</option>
-                                            </select>
-                                        </div>
-                                        <!--end::Input group-->
-                                        <!--begin::Input group-->
-                                        <div class="mb-10">
-                                            <label class="form-label fs-6 fw-bold">Status:</label>
-                                            <select class="form-select form-select-solid fw-bolder" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="status" data-hide-search="true">
-                                                <option></option>
-                                                <option value="Active">Active</option>
-                                                <option value="Expiring">Expiring</option>
-                                                <option value="Suspended">Suspended</option>
-                                            </select>
-                                        </div>
-                                        <!--end::Input group-->
-                                        <!--begin::Input group-->
-                                        <div class="mb-10">
-                                            <label class="form-label fs-6 fw-bold">Billing Method:</label>
-                                            <select class="form-select form-select-solid fw-bolder" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true">
-                                                <option></option>
-                                                <option value="Auto-debit">Auto-debit</option>
-                                                <option value="Manual - Credit Card">Manual - Credit Card</option>
-                                                <option value="Manual - Cash">Manual - Cash</option>
-                                                <option value="Manual - Paypal">Manual - Paypal</option>
-                                            </select>
-                                        </div>
-                                        <!--end::Input group-->
-                                        <!--begin::Input group-->
-                                        <div class="mb-10">
-                                            <label class="form-label fs-6 fw-bold">Product:</label>
-                                            <select class="form-select form-select-solid fw-bolder" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="product" data-hide-search="true">
-                                                <option></option>
-                                                <option value="Basic">Basic</option>
-                                                <option value="Basic Bundle">Basic Bundle</option>
-                                                <option value="Teams">Teams</option>
-                                                <option value="Teams Bundle">Teams Bundle</option>
-                                                <option value="Enterprise">Enterprise</option>
-                                                <option value=" Enterprise Bundle">Enterprise Bundle</option>
-                                            </select>
-                                        </div>
-                                        <!--end::Input group-->
-                                        <!--begin::Actions-->
-                                        <div class="d-flex justify-content-end">
-                                            <button type="reset" class="btn btn-light btn-active-light-primary fw-bold me-2 px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="reset">Reset</button>
-                                            <button type="submit" class="btn btn-primary fw-bold px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="filter">Apply</button>
-                                        </div>
-                                        <!--end::Actions-->
-                                    </div>
-                                    <!--end::Content-->
-                                </div>
-                                <!--end::Menu 1-->
+
                                 <!--end::Filter-->
                                 <!--begin::Export-->
-                                <button type="button" class="btn btn-light-primary me-3" data-bs-toggle="modal" data-bs-target="#kt_subscriptions_export_modal">
-                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr078.svg-->
-                                    <span class="svg-icon svg-icon-2">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<rect opacity="0.3" x="12.75" y="4.25" width="12" height="2" rx="1" transform="rotate(90 12.75 4.25)" fill="black" />
-														<path d="M12.0573 6.11875L13.5203 7.87435C13.9121 8.34457 14.6232 8.37683 15.056 7.94401C15.4457 7.5543 15.4641 6.92836 15.0979 6.51643L12.4974 3.59084C12.0996 3.14332 11.4004 3.14332 11.0026 3.59084L8.40206 6.51643C8.0359 6.92836 8.0543 7.5543 8.44401 7.94401C8.87683 8.37683 9.58785 8.34458 9.9797 7.87435L11.4427 6.11875C11.6026 5.92684 11.8974 5.92684 12.0573 6.11875Z" fill="black" />
-														<path d="M18.75 8.25H17.75C17.1977 8.25 16.75 8.69772 16.75 9.25C16.75 9.80228 17.1977 10.25 17.75 10.25C18.3023 10.25 18.75 10.6977 18.75 11.25V18.25C18.75 18.8023 18.3023 19.25 17.75 19.25H5.75C5.19772 19.25 4.75 18.8023 4.75 18.25V11.25C4.75 10.6977 5.19771 10.25 5.75 10.25C6.30229 10.25 6.75 9.80228 6.75 9.25C6.75 8.69772 6.30229 8.25 5.75 8.25H4.75C3.64543 8.25 2.75 9.14543 2.75 10.25V19.25C2.75 20.3546 3.64543 21.25 4.75 21.25H18.75C19.8546 21.25 20.75 20.3546 20.75 19.25V10.25C20.75 9.14543 19.8546 8.25 18.75 8.25Z" fill="#C4C4C4" />
-													</svg>
-												</span>
-                                    <!--end::Svg Icon-->Export</button>
+
                                 <!--end::Export-->
                                 <!--begin::Add subscription-->
                                 <a href="{{ route('admin.language.create') }}" class="btn btn-primary">
@@ -301,7 +206,8 @@
 														<rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black" />
 													</svg>
 												</span>
-                                    Add Subscription</a>
+                                    Dil Ekle
+                                </a>
                                 <!--end::Add subscription-->
                             </div>
                             <!--end::Toolbar-->
@@ -329,50 +235,43 @@
                                         <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_subscriptions_table .form-check-input" value="1" />
                                     </div>
                                 </th>
-                                <th class="min-w-125px">Customer</th>
-                                <th class="min-w-125px">Status</th>
-                                <th class="min-w-125px">Billing</th>
-                                <th class="min-w-125px">Product</th>
-                                <th class="min-w-125px">Created Date</th>
+                                <th class="min-w-125px">Sıra</th>
+                                <th class="min-w-125px">Kısaltma</th>
+                                <th class="min-w-125px">Açıklama</th>
                                 <th class="text-end min-w-70px">Actions</th>
                             </tr>
                             <!--end::Table row-->
                             </thead>
-                            <!--end::Table head-->
+
                             <!--begin::Table body-->
-                            <tbody class="text-gray-600 fw-bold">
 
-
+                            <tbody class="text-gray-600 fw-bold" id="sortable">
 
                             @foreach($language as $item)
-                            <tr>
+                            <tr id="{{ $item->id }}" style="cursor: move">
                                 <!--begin::Checkbox-->
-                                <td>
+                                <td style="vertical-align:middle ">
                                     <div class="form-check form-check-sm form-check-custom form-check-solid">
                                         <input class="form-check-input" type="checkbox" value="1" />
                                     </div>
                                 </td>
                                 <!--end::Checkbox-->
                                 <!--begin::Customer=-->
-                                <td>
-                                    <a href="../../demo1/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
+                                <td class="text-gray-800 mb-1">
+                                {{ $loop->iteration }}
                                 </td>
                                 <!--end::Customer=-->
                                 <!--begin::Status=-->
-                                <td>
-                                    <div class="badge badge-light-success">Active</div>
+                                <td class="text-gray-800 mb-1">
+                                    {{ $item->lang }}
                                 </td>
                                 <!--end::Status=-->
                                 <!--begin::Billing=-->
                                 <td>
-                                    <div class="badge badge-light">Auto-debit</div>
+                                    {{ $item->language }}
                                 </td>
                                 <!--end::Billing=-->
-                                <!--begin::Product=-->
-                                <td>Teams</td>
-                                <!--end::Product=-->
-                                <!--begin::Date=-->
-                                <td>Apr 15, 2022</td>
+
                                 <!--end::Date=-->
                                 <!--begin::Action=-->
                                 <td class="text-end">
@@ -387,18 +286,19 @@
                                     <!--begin::Menu-->
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
                                         <!--begin::Menu item-->
+                                        <!--end::Menu item-->
+                                        <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/apps/subscriptions/add.html" class="menu-link px-3">View</a>
+                                            <a href="{{ route('admin.language.edit', $item->id) }}" class="menu-link px-3">Edit</a>
                                         </div>
                                         <!--end::Menu item-->
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/apps/subscriptions/add.html" class="menu-link px-3">Edit</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="#" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+                                            <form id="languageDestroy" method="post" action="{{ route('admin.language.destroy', $item->id) }}">
+                                                @csrf
+                                                @method('delete')
+                                                <a href="#" onclick="document.getElementById('languageDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+                                            </form>
                                         </div>
                                         <!--end::Menu item-->
                                     </div>
@@ -410,6 +310,7 @@
                             @endforeach
 
                             </tbody>
+
                             <!--end::Table body-->
                         </table>
                         <!--end::Table-->
@@ -537,6 +438,23 @@
 
 @section('js')
 
+
+
+
+
+    @if(Session::get('success'))
+        <script>
+            toastr.success("{!! Session::get('success') !!}");
+        </script>
+    @endif
+
+    @if(Session::get('fail'))
+        <script>
+            toastr.error("{!! Session::get('fail') !!}");
+        </script>
+    @endif
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--end::Global Javascript Bundle-->
     <!--begin::Page Vendors Javascript(used by this page)-->
     <script src="{{ asset('back/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
@@ -544,6 +462,52 @@
     <!--begin::Page Custom Javascript(used by this page)-->
     <script src="{{ asset('back/assets/js/custom/apps/subscriptions/list/export.js') }}"></script>
     <script src="{{ asset('back/assets/js/custom/apps/subscriptions/list/list.js') }}"></script>
+
+
+    <script>
+        $(function () {
+
+            $("#sortable").sortable({
+                axis:'y',
+                cursor:'move',
+                opacity: 0.6,
+                update:function (e){
+                    var data = [];
+                    $('tbody tr').each(function (){
+                        data.push($(this).attr("id"))
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: '{{ route('admin.language.sortable') }}',
+                        data: {'data' : data},
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function (response) {
+
+                            var data = JSON.parse(response);
+                            if(data.status == "1"){
+                                alert("Başarılı");
+                                setTimeout(function(){
+                                    window.location.href = "{{ route('admin.language') }}";
+                                }, 1000);
+                            }else {
+
+                                setTimeout(function(){// wait for 5 secs(2)
+                                    window.location.href = "/";
+                                }, 1000);
+                            }
+
+
+                        },
+                        error: function (data) {
+                        }
+                    });
+                }
+            });
+            $("#sortable").disableSelection();
+        })
+    </script>
 
 
 

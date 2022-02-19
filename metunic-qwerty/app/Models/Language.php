@@ -9,6 +9,6 @@ class Language extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','lang','language','default'];
+    protected $fillable = ['id','lang','language','order','default'];
 
 }

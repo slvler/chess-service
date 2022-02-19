@@ -64,6 +64,17 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
         Route::get('/language',[LanguageController::class, 'index'])->name('language');
         Route::get('/language/create', [LanguageController::class, 'create'])->name('language.create');
+        Route::post('/language/store', [LanguageController::class, 'store'])->name('language.store');
+
+        Route::get('/language/edit/{id}', [LanguageController::class, 'edit'])->name('language.edit');
+
+        Route::put('/language/update/{id}', [LanguageController::class, 'update'])->name('language.update');
+
+        Route::delete('/language/destroy/{id}', [LanguageController::class, 'destroy'])->name('language.destroy');
+
+        Route::post('/language/sortable', [LanguageController::class, 'sortable'])->name('language.sortable');
+
+
     });
 
 });

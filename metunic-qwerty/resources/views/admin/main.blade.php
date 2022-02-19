@@ -4298,6 +4298,10 @@
 <!--end::Modal - Users Search-->
 <!--end::Modals-->
 <!--begin::Javascript-->
+
+@yield('modal')
+
+
 <script>var hostUrl = "assets/";</script>
 
 @include('admin.partials._script')
