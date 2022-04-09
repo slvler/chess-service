@@ -49,57 +49,10 @@
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
-                                        <span class="menu-title">eCommerce</span>
+                                        <span class="menu-title">Menü Yönetimi</span>
                                     </a>
                                 </div>
-                                <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/dashboards/store-analytics.html">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-                                        <span class="menu-title">Store Analytics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/dashboards/logistics.html">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-                                        <span class="menu-title">Logistics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/dashboards/delivery.html">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-                                        <span class="menu-title">Delivery</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/dashboards/marketing.html">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-                                        <span class="menu-title">Marketing</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/dashboards/social.html">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-                                        <span class="menu-title">Social</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/landing.html">
-															<span class="menu-bullet">
-																<span class="bullet bullet-dot"></span>
-															</span>
-                                        <span class="menu-title">Landing</span>
-                                    </a>
-                                </div>
+
                             </div>
                         </div>
                         <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
