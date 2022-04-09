@@ -45,7 +45,7 @@
                                     </a>
                                 </div>
                                 <div class="menu-item">
-                                    <a class="menu-link py-3" href="../../demo1/dist/dashboards/ecommerce.html">
+                                    <a class="menu-link py-3" href="{{ route('admin.menu') }}">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>

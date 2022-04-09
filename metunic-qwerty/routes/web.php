@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -8,6 +9,7 @@ use App\Http\Controllers\User\UserController;
 
 use \App\Http\Controllers\Admin\AdminController;
 use \App\Http\Controllers\Admin\LanguageController;
+use \App\Http\Controllers\Admin\MenuController;
 
 
 /*
@@ -70,6 +72,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::delete('/language/destroy/{id}', [LanguageController::class, 'destroy'])->name('language.destroy');
         Route::post('/language/sortable', [LanguageController::class, 'sortable'])->name('language.sortable');
 
+        Route::get('/menu',[MenuController::class, 'index'])->name('menu');
+        Route::get('/menu/create',[MenuController::class, 'create'])->name('menu.create');
+        Route::post('/menu/store',[MenuController::class, 'store'])->name('menu.store');
 
     });
 

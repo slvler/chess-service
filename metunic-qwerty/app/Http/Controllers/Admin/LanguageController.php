@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
+
 use App\Http\Requests\Admin\LanguageStoreRequest;
-use App\Http\Requests\LanguageUpdateRequest;
+use App\Http\Requests\Admin\LanguageUpdateRequest;
 use http\Env\Response;
 use Illuminate\Http\Request;
 
