@@ -1,7 +1,8 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+
 
 
 use App\Http\Controllers\User\UserController;
@@ -75,6 +76,10 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/menu',[MenuController::class, 'index'])->name('menu');
         Route::get('/menu/create',[MenuController::class, 'create'])->name('menu.create');
         Route::post('/menu/store',[MenuController::class, 'store'])->name('menu.store');
+        Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->name('menu.edit');
+
+
+        Route::get('/category',[CategoryController::class, 'index'])->name('category');
 
     });
 
