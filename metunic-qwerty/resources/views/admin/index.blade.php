@@ -2053,6 +2053,13 @@
                             </div>
                             <!--end::Header-->
                             <!--begin::Body-->
+
+                            <div>
+
+
+
+                            </div>
+
                             <div class="card-body py-3">
                                 <div class="tab-content">
                                     <!--begin::Tap pane-->
@@ -2074,6 +2081,8 @@
                                                 <!--end::Table head-->
                                                 <!--begin::Table body-->
                                                 <tbody>
+
+
                                                 <tr>
                                                     <td>
                                                         <div class="symbol symbol-45px me-2">
@@ -2083,7 +2092,7 @@
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">Brad Simmons</a>
+                                                        <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6"></a>
                                                         <span class="text-muted fw-bold d-block">Movie Creator</span>
                                                     </td>
                                                     <td class="text-end text-muted fw-bold">React, HTML</td>
@@ -2103,122 +2112,7 @@
                                                         </a>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="symbol symbol-45px me-2">
-																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="" />
-																				</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">Popular Authors</a>
-                                                        <span class="text-muted fw-bold d-block">Most Successful</span>
-                                                    </td>
-                                                    <td class="text-end text-muted fw-bold">Python, MySQL</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-light-warning">In Progress</span>
-                                                    </td>
-                                                    <td class="text-end">
-                                                        <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                            <span class="svg-icon svg-icon-2">
-																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																						<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																						<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																					</svg>
-																				</span>
-                                                            <!--end::Svg Icon-->
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="symbol symbol-45px me-2">
-																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center" alt="" />
-																				</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">New Users</a>
-                                                        <span class="text-muted fw-bold d-block">Awesome Users</span>
-                                                    </td>
-                                                    <td class="text-end text-muted fw-bold">Laravel,Metronic</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-light-primary">Success</span>
-                                                    </td>
-                                                    <td class="text-end">
-                                                        <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                            <span class="svg-icon svg-icon-2">
-																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																						<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																						<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																					</svg>
-																				</span>
-                                                            <!--end::Svg Icon-->
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="symbol symbol-45px me-2">
-																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="" />
-																				</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">Active Customers</a>
-                                                        <span class="text-muted fw-bold d-block">Movie Creator</span>
-                                                    </td>
-                                                    <td class="text-end text-muted fw-bold">AngularJS, C#</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-light-danger">Rejected</span>
-                                                    </td>
-                                                    <td class="text-end">
-                                                        <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                            <span class="svg-icon svg-icon-2">
-																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																						<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																						<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																					</svg>
-																				</span>
-                                                            <!--end::Svg Icon-->
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="symbol symbol-45px me-2">
-																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/kickstarter.svg" class="h-50 align-self-center" alt="" />
-																				</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">Bestseller Theme</a>
-                                                        <span class="text-muted fw-bold d-block">Best Customers</span>
-                                                    </td>
-                                                    <td class="text-end text-muted fw-bold">ReactJS, Ruby</td>
-                                                    <td class="text-end">
-                                                        <span class="badge badge-light-warning">In Progress</span>
-                                                    </td>
-                                                    <td class="text-end">
-                                                        <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                                            <span class="svg-icon svg-icon-2">
-																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																						<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																						<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																					</svg>
-																				</span>
-                                                            <!--end::Svg Icon-->
-                                                        </a>
-                                                    </td>
-                                                </tr>
+
                                                 </tbody>
                                                 <!--end::Table body-->
                                             </table>

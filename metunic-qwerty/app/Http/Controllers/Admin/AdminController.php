@@ -13,16 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
 
-    /*
-   public function login()
-   {
 
-   }
-
-    public function register()
-   {
-   }
-   */
     public function check(AdminCheckRequest $request)
     {
 

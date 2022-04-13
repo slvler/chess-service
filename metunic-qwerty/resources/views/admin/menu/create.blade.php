@@ -115,7 +115,7 @@
                                                 <label class="required form-label">Menü Adı</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="menu_name" class="form-control mb-2" placeholder="Menü Adı"  />
+                                                <input type="text"  name="menu_name" class="form-control mb-2" placeholder="Menü Adı"  />
 
                                                 <!--end::Description-->
                                             </div>

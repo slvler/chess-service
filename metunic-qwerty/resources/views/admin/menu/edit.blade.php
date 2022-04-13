@@ -82,9 +82,9 @@
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
                 <!--begin::Form-->
-                <form action="{{ route('admin.menu.store') }}" method="post"  class="form d-flex flex-column flex-lg-row" data-kt-redirect="../../demo1/dist/apps/ecommerce/catalog/products.html">
+                <form action="{{ route('admin.menu.update', [$menu->id]) }}" method="post"  class="form d-flex flex-column flex-lg-row" data-kt-redirect="../../demo1/dist/apps/ecommerce/catalog/products.html">
                 @csrf
-                @method('POST')
+                @method('PUT')
                 <!--begin::Aside column-->
                     <!--begin::Main column-->
                     <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
@@ -115,7 +115,7 @@
                                                 <label class="required form-label">Menü Adı</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="menu_name" class="form-control mb-2" placeholder="Menü Adı"  />
+                                                <input type="text"  value="{{ $menu->title }}" name="menu_name" class="form-control mb-2"   />
 
                                                 <!--end::Description-->
                                             </div>
@@ -126,7 +126,7 @@
                                                 <label class="required form-label">Menü Açıklaması</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="menu_desc" class="form-control mb-2" placeholder="Menü Açıklaması"  />
+                                                <input type="text" value="{{ $menu->desc }}" name="menu_desc" class="form-control mb-2"  />
 
                                                 <!--end::Description-->
                                             </div>
@@ -156,8 +156,8 @@
                                             <!--begin::Select2-->
                                             <select name="menu_type" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Menü Tip Seçimi" id="kt_ecommerce_add_product_status_select3">
                                                 <option></option>
-                                                <option value="0" >Sabit Menü</option>
-                                                <option value="1">Dinamik Menü</option>
+                                                <option {{ $menu->menu_type == "0" ? "selected" : "" }} value="0" >Sabit Menü</option>
+                                                <option  {{ $menu->menu_type == "1" ? "selected" : "" }} value="1">Dinamik Menü</option>
                                             </select>
 
                                             <!--end::Datepicker-->
@@ -182,19 +182,19 @@
                                             <!--begin::Select2-->
                                             <select name="url_choise" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Özel Url Seçimi" id="kt_ecommerce_add_product_status_select2">
                                                 <option></option>
-                                                <option value="0" >Pasif</option>
-                                                <option value="1">Aktif</option>
+                                                <option {{ $menu->url == "0" ? "selected" : "" }} value="0" >Pasif</option>
+                                                <option {{ $menu->url == "1" ? "selected" : "" }} value="1">Aktif</option>
                                             </select>
 
                                             <!--end::Datepicker-->
                                         </div>
 
-                                        <div id="menuUrl" class="card-body pt-0" style="display: none;">
+                                        <div id="menuUrl" class="card-body pt-0" {{ $menu->url == "1" ? 'style = display:block' : 'style = display:none' }} >
                                             <!--begin::Label-->
                                             <label class="required form-label">Menü Url Alanı</label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" name="menu_url" class="form-control mb-2" placeholder="Menü Url"  />
+                                            <input value="{{ $menu->url_adress }}" type="text" name="menu_url" class="form-control mb-2"   />
 
                                             <!--end::Description-->
                                         </div>
@@ -219,8 +219,8 @@
                                             <!--begin::Select2-->
                                             <select name="default" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Menü Durum Seçimi" id="kt_ecommerce_add_product_status_select">
                                                 <option></option>
-                                                <option value="1" >Yayında</option>
-                                                <option value="0">Pasif</option>
+                                                <option {{ $menu->status == "1" ? "selected" : "" }} value="1" >Yayında</option>
+                                                <option {{ $menu->status == "0" ? "selected" : "" }}  value="0">Pasif</option>
                                             </select>
                                             <!--end::Select2-->
 

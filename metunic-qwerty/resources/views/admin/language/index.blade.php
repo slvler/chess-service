@@ -18,7 +18,9 @@
 @endsection
 
 @section('content')
-    <!--begin::Content-->
+
+
+
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <!--begin::Toolbar-->
         <div class="toolbar" id="kt_toolbar">
@@ -248,64 +250,64 @@
                             <tbody class="text-gray-600 fw-bold" id="sortable">
 
                             @foreach($language as $item)
-                            <tr id="{{ $item->id }}" style="cursor: move">
-                                <!--begin::Checkbox-->
-                                <td style="vertical-align:middle ">
-                                    <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                        <input class="form-check-input" type="checkbox" value="1" />
-                                    </div>
-                                </td>
-                                <!--end::Checkbox-->
-                                <!--begin::Customer=-->
-                                <td class="text-gray-800 mb-1">
-                                {{ $loop->iteration }}
-                                </td>
-                                <!--end::Customer=-->
-                                <!--begin::Status=-->
-                                <td class="text-gray-800 mb-1">
-                                    {{ $item->lang }}
-                                </td>
-                                <!--end::Status=-->
-                                <!--begin::Billing=-->
-                                <td>
-                                    {{ $item->language }}
-                                </td>
-                                <!--end::Billing=-->
+                                <tr id="{{ $item->id }}" style="cursor: move">
+                                    <!--begin::Checkbox-->
+                                    <td style="vertical-align:middle ">
+                                        <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                            <input class="form-check-input" type="checkbox" value="1" />
+                                        </div>
+                                    </td>
+                                    <!--end::Checkbox-->
+                                    <!--begin::Customer=-->
+                                    <td class="text-gray-800 mb-1">
+                                        {{ $loop->iteration }}
+                                    </td>
+                                    <!--end::Customer=-->
+                                    <!--begin::Status=-->
+                                    <td class="text-gray-800 mb-1">
+                                        {{ $item->lang }}
+                                    </td>
+                                    <!--end::Status=-->
+                                    <!--begin::Billing=-->
+                                    <td>
+                                        {{ $item->language }}
+                                    </td>
+                                    <!--end::Billing=-->
 
-                                <!--end::Date=-->
-                                <!--begin::Action=-->
-                                <td class="text-end">
-                                    <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-                                        <span class="svg-icon svg-icon-5 m-0">
+                                    <!--end::Date=-->
+                                    <!--begin::Action=-->
+                                    <td class="text-end">
+                                        <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                            <span class="svg-icon svg-icon-5 m-0">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
 															</svg>
 														</span>
-                                        <!--end::Svg Icon--></a>
-                                    <!--begin::Menu-->
-                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
-                                        <!--begin::Menu item-->
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="{{ route('admin.language.edit', $item->id) }}" class="menu-link px-3">Edit</a>
+                                            <!--end::Svg Icon--></a>
+                                        <!--begin::Menu-->
+                                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+                                            <!--begin::Menu item-->
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3">
+                                                <a href="{{ route('admin.language.edit', $item->id) }}" class="menu-link px-3">Edit</a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3">
+                                                <form id="languageDestroy" method="post" action="{{ route('admin.language.destroy', $item->id) }}">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <a href="#" onclick="document.getElementById('languageDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+                                                </form>
+                                            </div>
+                                            <!--end::Menu item-->
                                         </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <form id="languageDestroy" method="post" action="{{ route('admin.language.destroy', $item->id) }}">
-                                                @csrf
-                                                @method('delete')
-                                                <a href="#" onclick="document.getElementById('languageDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
-                                            </form>
-                                        </div>
-                                        <!--end::Menu item-->
-                                    </div>
-                                    <!--end::Menu-->
-                                </td>
-                                <!--end::Action=-->
-                            </tr>
+                                        <!--end::Menu-->
+                                    </td>
+                                    <!--end::Action=-->
+                                </tr>
 
                             @endforeach
 
@@ -434,6 +436,10 @@
         </div>
         <!--end::Post-->
     </div>
+
+
+    <!--begin::Content-->
+
 @stop
 
 @section('js')
