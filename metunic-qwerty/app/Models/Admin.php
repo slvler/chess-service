@@ -42,4 +42,24 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function permissions(){
+        return $this->belongsTomany(Permission::class,'users_permissions');
+    }
+    public function roles(){
+        return $this->belongsTomany(Role::class,'admins_roles');
+    }
+
+    // check has role
+    public function hasRole(...$roles){
+        foreach($roles as $role){
+            if($this->roles->contains('slug',$role)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }

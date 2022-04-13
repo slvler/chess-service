@@ -52,6 +52,16 @@
                                         <span class="menu-title">Menü Yönetimi</span>
                                     </a>
                                 </div>
+                                @role('editor')
+                                <div class="menu-item">
+                                    <a class="menu-link py-3" href="{{ route('admin.panel.user') }}">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+                                        <span class="menu-title">Kullanıcı Yönetimi</span>
+                                    </a>
+                                </div>
+                                @endrole
 
                             </div>
                         </div>
