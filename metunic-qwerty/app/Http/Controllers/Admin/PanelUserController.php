@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\PanelUserStoreRequest;
 use App\Models\Admin;
+use App\Models\PanelUser;
 use App\Models\Permission;
 use App\Models\Role;
 
@@ -44,5 +45,8 @@ class PanelUserController extends Controller
     public function store(PanelUserStoreRequest $request)
     {
        return $request->all();
+
+       new PanelUser();
+
     }
 }
