@@ -55,15 +55,15 @@
             <!--end::Container-->
         </div>
         <!--end::Toolbar-->
-    {{--    @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif--}}
+        {{--    @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif--}}
 
 
 
@@ -84,9 +84,9 @@
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
                 <!--begin::Form-->
-                <form action="{{ route('admin.panel.user.store') }}" method="post"  class="form d-flex flex-column flex-lg-row" >
+                <form action="{{ route('admin.panel.user.update', [$admin->id]) }}" method="post"  class="form d-flex flex-column flex-lg-row" >
                 @csrf
-                @method('POST')
+                @method('PUT')
                 <!--begin::Aside column-->
                     <!--begin::Main column-->
                     <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
@@ -113,11 +113,13 @@
                                         <div class="card-body pt-0">
                                             <!--begin::Input group-->
                                             <div class="mb-10 fv-row">
+
+
                                                 <!--begin::Label-->
                                                 <label class="@if($errors->has('name')) required @endif  form-label">Kullanıcı Adı @if($errors->has('name'))  <strong>{{ $errors->first('name') }}</strong> @endif</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="name" class="form-control mb-2" value="{{ old('name') }}" placeholder="Kullanıcı Adı"  />
+                                                <input type="text" name="name" class="form-control mb-2" value="{{ $admin->name }}"  />
 
                                                 <!--end::Description-->
                                             </div>
@@ -127,7 +129,7 @@
                                                 <label class="@if($errors->has('email')) required @endif form-label">E Mail Adresi   @if($errors->has('email'))  <strong>{{ $errors->first('email') }}</strong> @endif  </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="email" class="form-control mb-2" value="{{ old('email') }}" placeholder="E Mail Adresi"  />
+                                                <input type="text" name="email" class="form-control mb-2" value="{{ $admin->email }}" />
 
                                                 <!--end::Description-->
                                             </div>
@@ -138,7 +140,7 @@
                                                 <label class="@if($errors->has('password')) required @endif form-label">Kullanıcı Şifresi  @if($errors->has('password'))  <strong>{{ $errors->first('password') }}</strong> @endif </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="password" name="password" class="form-control mb-2" placeholder="Kullanıcı Şifresi"  />
+                                                <input type="password" name="password" class="form-control mb-2"  />
 
                                                 <!--end::Description-->
                                             </div>
@@ -149,7 +151,7 @@
                                                 <label class="@if($errors->has('repassword')) required @endif form-label">Kullanıcı Şifresi Tekrar  @if($errors->has('repassword'))  <strong>{{ $errors->first('repassword') }}</strong> @endif </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="password" name="repassword" class="form-control mb-2" placeholder="Kullanıcı Şifresi Tekrar"  />
+                                                <input type="password" name="repassword" class="form-control mb-2"  />
 
                                                 <!--end::Description-->
                                             </div>
@@ -178,14 +180,16 @@
                                         </div>
                                         <!--end::Card header-->
                                         <!--begin::Card body-->
+
+
                                         <div class="card-body pt-0">
                                             <!--begin::Select2-->
                                             <select name="default" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Kullanıcı Rolü Belirleme" id="kt_ecommerce_add_product_status_select">
                                                 <option></option>
-                                                <option value="1">Admin</option>
-                                                <option value="2">Yazılım</option>
-                                                <option value="3">Editör</option>
-                                                <option value="4">Yazar</option>
+                                                <option {{ $admin->adminRolesDetail->role_id == 1 ? "selected" : "" }} value="1">Admin</option>
+                                                <option {{ $admin->adminRolesDetail->role_id == 2 ? "selected" : "" }} value="2">Yazılım</option>
+                                                <option {{ $admin->adminRolesDetail->role_id == 3 ? "selected" : "" }} value="3">Editör</option>
+                                                <option {{ $admin->adminRolesDetail->role_id == 4 ? "selected" : "" }} value="4">Yazar</option>
                                             </select>
                                             <!--end::Select2-->
 

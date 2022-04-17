@@ -52,7 +52,7 @@
                                         <span class="menu-title">Menü Yönetimi</span>
                                     </a>
                                 </div>
-                                @role('editor')
+                                @role('admin')
                                 <div class="menu-item">
                                     <a class="menu-link py-3" href="{{ route('admin.panel.user') }}">
 															<span class="menu-bullet">

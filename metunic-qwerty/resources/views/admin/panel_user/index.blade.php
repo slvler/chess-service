@@ -291,7 +291,7 @@
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <a href="{{ route('admin.language.edit', $item->id) }}" class="menu-link px-3">Edit</a>
+                                                <a href="{{ route('admin.panel.user.edit', $item->id) }}" class="menu-link px-3">Edit</a>
                                             </div>
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->

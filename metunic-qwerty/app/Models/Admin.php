@@ -44,6 +44,8 @@ class Admin extends Authenticatable
     ];
 
 
+
+
     public function permissions(){
         return $this->belongsTomany(Permission::class,'users_permissions');
     }
@@ -61,5 +63,13 @@ class Admin extends Authenticatable
         return false;
     }
 
+
+
+    // Admin_role relationship
+
+
+    public function adminRolesDetail() {
+        return $this->hasOne('App\Models\AdminRole','admin_id','id');
+    }
 
 }

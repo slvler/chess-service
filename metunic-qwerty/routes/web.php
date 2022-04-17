@@ -87,6 +87,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/panel_user/create',[PanelUserController::class, 'create'])->name('panel.user.create');
         Route::post('/panel_user/store',[PanelUserController::class, 'store'])->name('panel.user.store');
 
+        Route::get('/panel_user/edit/{admin}',[PanelUserController::class, 'edit'])->name('panel.user.edit');
+        Route::put('/panel_user/update/{admin}', [PanelUserController::class, 'update'])->name('panel.user.update');
 
 
 
