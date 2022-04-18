@@ -10,4 +10,8 @@ class AdminRole extends Model
     use HasFactory;
 
     protected $table = "Admins_Roles";
+
+
+
+
 }

@@ -296,10 +296,10 @@
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <form id="languageDestroy" method="post" action="{{ route('admin.language.destroy', $item->id) }}">
+                                                <form id="AdminDestroy" method="post" action="{{ route('admin.panel.user.destroy', $item->id) }}">
                                                     @csrf
                                                     @method('delete')
-                                                    <a href="#" onclick="document.getElementById('languageDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+                                                    <a href="#" onclick="document.getElementById('AdminDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
                                                 </form>
                                             </div>
                                             <!--end::Menu item-->

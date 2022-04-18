@@ -18,6 +18,7 @@ class PanelUserController extends Controller
     public function index()
     {
 
+
         $data = [];
         $data['home'] = [
             'title' => "Anasayfa",
@@ -117,5 +118,11 @@ class PanelUserController extends Controller
 
 
 
+    }
+
+
+    public function destroy($id)
+    {
+        return $id;
     }
 }

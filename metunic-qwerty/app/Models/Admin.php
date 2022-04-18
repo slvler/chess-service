@@ -10,6 +10,8 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Admin extends Authenticatable
 {
+
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -71,5 +73,11 @@ class Admin extends Authenticatable
     public function adminRolesDetail() {
         return $this->hasOne('App\Models\AdminRole','admin_id','id');
     }
+
+    public function AdminRole() {
+        return $this->belongsToMany('App\Models\Role', 'admins_roles','admin_id','role_id');
+    }
+
+
 
 }

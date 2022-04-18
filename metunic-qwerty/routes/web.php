@@ -89,6 +89,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
         Route::get('/panel_user/edit/{admin}',[PanelUserController::class, 'edit'])->name('panel.user.edit');
         Route::put('/panel_user/update/{admin}', [PanelUserController::class, 'update'])->name('panel.user.update');
+        Route::delete('/panel_user/destroy/{id}', [PanelUserController::class, 'destroy'])->name('panel.user.destroy');
+
+
 
 
 
