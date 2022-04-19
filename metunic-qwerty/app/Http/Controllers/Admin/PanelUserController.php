@@ -123,6 +123,8 @@ class PanelUserController extends Controller
 
     public function destroy($id)
     {
+
+        return Admin::findOrFail($id);
         return $id;
     }
 }
