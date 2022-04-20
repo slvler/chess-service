@@ -124,7 +124,16 @@ class PanelUserController extends Controller
     public function destroy($id)
     {
 
-        return Admin::findOrFail($id);
-        return $id;
+        $admin = Admin::findOrFail($id);
+        $admin->AdminRole()->where('admin_id',$id)->detach();
+        $adminRole = $admin->delete();
+
+        if ($adminRole)
+        {
+            return redirect()->back()->with('success', 'Kayıt Başarıyla Silindi.');
+        }else {
+            return redirect()->back()->with('fail', 'Fail Register');
+        }
+
     }
 }
