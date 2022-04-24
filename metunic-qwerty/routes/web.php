@@ -12,6 +12,7 @@ use \App\Http\Controllers\Admin\AdminController;
 use \App\Http\Controllers\Admin\LanguageController;
 use \App\Http\Controllers\Admin\MenuController;
 use \App\Http\Controllers\Admin\PanelUserController;
+use \App\Http\Controllers\Admin\SliderController;
 
 
 /*
@@ -100,7 +101,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 
 
-        Route::get('/slider',[CategoryController::class, 'index'])->name('slider');
+        Route::get('/slider',[SliderController::class, 'index'])->name('slider');
+        Route::get('/slider/create',[SliderController::class, 'create'])->name('slider.create');
+        Route::post('/slider/store',[SliderController::class, 'store'])->name('slider.store');
 
     });
 

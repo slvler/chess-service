@@ -6,6 +6,8 @@
 <head>
 
     @include('admin.partials._head')
+
+
     <!--end::Global Stylesheets Bundle-->
 </head>
 <!--end::Head-->
