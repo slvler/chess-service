@@ -210,19 +210,19 @@
                                     <!--end::Customer=-->
                                     <!--begin::Status=-->
                                     <td class="text-gray-800 mb-1">
-                                        {{ $item->lang }}
+                                        {{ $item->title }}
                                     </td>
                                     <!--end::Status=-->
                                     <!--begin::Billing=-->
                                     <td>
-                                        {{ $item->language }}
+                                        {!! $item->desc !!}
                                     </td>
                                     <!--end::Billing=-->
 
                                     <!--end::Date=-->
                                     <!--begin::Action=-->
                                     <td class="text-end">
-                                        <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                        <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">İşlemler
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                             <span class="svg-icon svg-icon-5 m-0">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -235,8 +235,14 @@
                                             <!--begin::Menu item-->
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
+
+
                                             <div class="menu-item px-3">
-                                                <a href="{{ route('admin.language.edit', $item->id) }}" class="menu-link px-3">Edit</a>
+                                                <a href="{{ route('admin.language.edit', $item->id) }}" class="menu-link px-3">Görsel Düz.</a>
+                                            </div>
+
+                                            <div class="menu-item px-3">
+                                                <a href="{{ route('admin.slider.edit', $item->id) }}" class="menu-link px-3">Düzenleme</a>
                                             </div>
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
@@ -244,7 +250,7 @@
                                                 <form id="languageDestroy" method="post" action="{{ route('admin.language.destroy', $item->id) }}">
                                                     @csrf
                                                     @method('delete')
-                                                    <a href="#" onclick="document.getElementById('languageDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+                                                    <a href="#" onclick="document.getElementById('languageDestroy').submit();" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Sil</a>
                                                 </form>
                                             </div>
                                             <!--end::Menu item-->

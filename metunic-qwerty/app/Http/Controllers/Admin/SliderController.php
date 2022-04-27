@@ -77,4 +77,40 @@ class SliderController extends Controller
 
     }
 
+    public function edit($id)
+    {
+
+        $data = [];
+        $data['home'] = [
+            'title' => "Anasayfa",
+            'url' => '/admin/home'
+        ];
+        $data['title'] = "Slider Bölümü";
+        $data['subtitle'] = "Slider Ekleme";
+        $slider = Slider::findOrfail($id);
+
+        return view('admin.slider.edit', compact('data','slider') );
+
+    }
+
+    public function update(Request $request, $id)
+    {
+        $slider = Slider::findOrfail($id);
+
+        $slider->title = $request->title;
+        $slider->desc = $request->desc;
+        $slider->keyword = $request->keyword;
+        $slider->url = $request->url;
+        $slider->url_adress = $request->url_adress;
+        $slider->status = $request->status;
+
+        $slider->save();
+
+        return redirect()->back();
+
+    }
+
+
+
+
 }
