@@ -186,7 +186,7 @@ class LanguageController extends Controller
 
                 //return $request->data;
 
-                $affected = DB::table('languages')->where('id', $v)->update(['order' => $k]);
+                $affected = DB::table('languages')->where('lang_key', $v)->update(['order' => $k]);
 
             }
 

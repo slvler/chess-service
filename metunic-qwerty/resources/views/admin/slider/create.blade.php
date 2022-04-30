@@ -33,101 +33,22 @@
                 <form method="post" action="{{ route('admin.slider.store') }}" enctype="multipart/form-data" class="form d-flex flex-column flex-lg-row">
                 @csrf
                 @method('POST') <!--begin::Aside column-->
-                    <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
-
-
-                        <div class="card card-flush py-4">
-                            <!--begin::Card header-->
-                            <div class="card-header">
-                                <!--begin::Card title-->
-                                <div class="card-title">
-                                    <h2>Slider Görsel</h2>
-                                </div>
-                                <!--end::Card title-->
-                            </div>
-                            <!--end::Card header-->
-                            <!--begin::Card body-->
-                            <div class="card-body text-center pt-0">
-                                <!--begin::Image input-->
-                                <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" style="background-image: url(assets/media/svg/files/blank-image.svg)">
-                                    <!--begin::Preview existing avatar-->
-                                    <div  class="image-input-wrapper w-150px h-150px"></div>
-                                    <!--end::Preview existing avatar-->
-                                    <!--begin::Label-->
-                                    <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                                        <i class="bi bi-pencil-fill fs-7"></i>
-                                        <!--begin::Inputs-->
-                                        <input type="file" name="image" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="avatar_remove" />
-                                        <!--end::Inputs-->
-                                    </label>
-                                    <!--end::Label-->
-                                    <!--begin::Cancel-->
-                                    <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-														<i class="bi bi-x fs-2"></i>
-													</span>
-                                    <!--end::Cancel-->
-                                    <!--begin::Remove-->
-                                    <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-														<i class="bi bi-x fs-2"></i>
-													</span>
-                                    <!--end::Remove-->
-                                </div>
-                                <!--end::Image input-->
-                                <!--begin::Description-->
-                                <div class="text-muted fs-7">Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
-                                <!--end::Description-->
-                            </div>
-                            <!--end::Card body-->
-                        </div>
-
-                        <!--begin::Status-->
-                        <div class="card card-flush py-4">
-                            <!--begin::Card header-->
-                            <div class="card-header">
-                                <!--begin::Card title-->
-                                <div class="card-title">
-                                    <h2>Slider Durum</h2>
-                                </div>
-                                <!--end::Card title-->
-                                <!--begin::Card toolbar-->
-                                <div class="card-toolbar">
-                                    <div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_product_status"></div>
-                                </div>
-                                <!--begin::Card toolbar-->
-                            </div>
-                            <!--end::Card header-->
-                            <!--begin::Card body-->
-                            <div class="card-body pt-0">
-                                <!--begin::Select2-->
-                                <select name="status" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_product_status_select">
-                                    <option></option>
-                                    <option value="1" selected="selected">Aktif</option>
-                                    <option value="0">Pasif</option>
-                                </select>
-                                <!--end::Select2-->
-                                <!--end::Description-->
-                                <!--begin::Datepicker-->
-                                <div class="d-none mt-10">
-                                    <label for="kt_ecommerce_add_product_status_datepicker" class="form-label">Select publishing date and time</label>
-                                    <input class="form-control" id="kt_ecommerce_add_product_status_datepicker" placeholder="Pick date &amp; time" />
-                                </div>
-                                <!--end::Datepicker-->
-                            </div>
-                            <!--end::Card body-->
-                        </div>
-                        <!--end::Status-->
-                        <!--end::Template settings-->
-                    </div>
                     <!--end::Aside column-->
                     <!--begin::Main column-->
                     <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                         <!--begin:::Tabs-->
                         <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-n2">
                             <!--begin:::Tab item-->
+
+                            @for($i =0; $i < count($variable); $i++)
                             <li class="nav-item">
-                                <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_ecommerce_add_product_general">İşlemler</a>
+                                <a class="nav-link text-active-primary pb-4 {{ $i == 0 ? "active" : "" }}" data-bs-toggle="tab" href="#slider-{{ $variable[$i]['lang'] }}">{{ $variable[$i]['language'] }}</a>
                             </li>
+
+{{--                            <li class="nav-item">--}}
+{{--                                <a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#kt_ecommerce_add_product_advanced">Advanced</a>--}}
+{{--                            </li>--}}
+                         @endfor
                             <!--end:::Tab item-->
 
                             <!--end:::Tab item-->
@@ -136,7 +57,9 @@
                         <!--begin::Tab content-->
                         <div class="tab-content">
                             <!--begin::Tab pane-->
-                            <div class="tab-pane fade show active" id="kt_ecommerce_add_product_general" role="tab-panel">
+
+                            @for($i =0; $i < count($variable); $i++)
+                            <div class="tab-pane fade show {{ $i == 0 ? "show active" : "" }} " id="slider-{{ $variable[$i]['lang'] }}" role="tab-panel">
                                 <div class="d-flex flex-column gap-7 gap-lg-10">
                                     <!--begin::General options-->
                                     <div class="card card-flush py-4">
@@ -155,7 +78,7 @@
                                                 <label class="required form-label">Slider Başlık</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="title" class="form-control mb-2" placeholder="Product name" value="" />
+                                                <input type="text" name="title[{{ $variable[$i]['lang'] }}]" class="form-control mb-2" placeholder="Product name" value="" />
                                                 <!--end::Input-->
                                                 <!--begin::Description-->
                                                {{-- <div class="text-muted fs-7">A product name is required and recommended to be unique.</div>--}}
@@ -168,8 +91,8 @@
                                                 <label class="form-label">Slider Açıklama</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
-                                                <div  class="min-h-200px mb-2 quill-textarea"></div>
-                                                <textarea style="display: none" id="detail" name="desc"></textarea>
+                                                <div  class="min-h-200px mb-2 quill-textarea-{{ $variable[$i]['lang'] }}"></div>
+                                                <textarea style="display: none" id="detail-{{ $variable[$i]['lang'] }}" name="desc[{{ $variable[$i]['lang'] }}]"></textarea>
 
                                             </div>
 
@@ -180,7 +103,7 @@
                                                 <label class="required form-label">Slider Keywords</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="keyword" class="form-control mb-2" placeholder="Slider Keywords" value="" />
+                                                <input type="text" name="keyword[{{ $variable[$i]['lang'] }}]" class="form-control mb-2" placeholder="Slider Keywords" value="" />
                                                 <!--end::Input-->
                                                 <!--begin::Description-->
                                             {{-- <div class="text-muted fs-7">A product name is required and recommended to be unique.</div>--}}
@@ -246,28 +169,27 @@
                                                 <!--begin::Label-->
                                                 <label class="required form-label">Url Adresi</label>
                                                 <!--end::Label-->
-
                                                     <!--begin::Select2-->
-                                                    <select name="url" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Özel Url Seçimi" id="kt_ecommerce_add_product_status_select2">
+                                                    <select name="url[{{ $variable[$i]['lang'] }}]" class="form-select mb-2 urladress-{{ $variable[$i]['lang'] }}" data-control="select2" data-hide-search="true" data-placeholder="Özel Url Seçimi" id="kt_ecommerce_add_product_status_select2">
                                                         <option></option>
-                                                        <option value="0" >Pasif</option>
+                                                        <option selected value="0" >Pasif</option>
                                                         <option value="1">Aktif</option>
                                                     </select>
                                             </div>
 
-                                            <div id="menuUrl" class="mb-10 fv-row" style="display: none;">
+                                            <div id="menuUrl{{ $variable[$i]['lang'] }}" class="mb-10 fv-row" style="display: none;">
                                                 <!--begin::Label-->
                                                 <label class="required form-label">Slider Url Alanı</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="url_adress" class="form-control mb-2" placeholder="Menü Url"  />
+                                                <input type="text" name="url_adress[{{ $variable[$i]['lang'] }}]" class="form-control mb-2" placeholder="Menü Url"  />
 
                                                 <!--end::Description-->
                                             </div>
                                             <!--end:Tax-->
                                         </div>
 
-                                        <input type="hidden" name="order" value="0">
+                                        <input type="hidden" name="order[{{ $variable[$i]['lang'] }}]" value="0">
 
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
@@ -290,9 +212,84 @@
 
                                         <!--end::Card header-->
                                     </div>
+
+{{--                                    <div class="card card-flush py-4">--}}
+{{--                                        <!--begin::Card header-->--}}
+{{--                                        <div class="card-header">--}}
+{{--                                            <!--begin::Card title-->--}}
+{{--                                            <div class="card-title">--}}
+{{--                                                <h2>Slider Görsel</h2>--}}
+{{--                                            </div>--}}
+{{--                                            <!--end::Card title-->--}}
+{{--                                        </div>--}}
+{{--                                        <!--end::Card header-->--}}
+{{--                                        <!--begin::Card body-->--}}
+{{--                                        <div class="card-body text-center pt-0">--}}
+{{--                                            <!--begin::Image input-->--}}
+{{--                                            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true" style="background-image: url(assets/media/svg/files/blank-image.svg)">--}}
+{{--                                                <!--begin::Preview existing avatar-->--}}
+{{--                                                <div  class="image-input-wrapper w-150px h-150px"></div>--}}
+{{--                                                <!--end::Preview existing avatar-->--}}
+{{--                                                <!--begin::Label-->--}}
+{{--                                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">--}}
+{{--                                                    <i class="bi bi-pencil-fill fs-7"></i>--}}
+{{--                                                    <!--begin::Inputs-->--}}
+{{--                                                    <input type="file" name="image[{{ $variable[$i]['lang'] }}]" accept=".png, .jpg, .jpeg" />--}}
+{{--                                                    <input type="hidden" name="avatar_remove" />--}}
+{{--                                                    <!--end::Inputs-->--}}
+{{--                                                </label>--}}
+{{--                                                <!--end::Label-->--}}
+{{--                                                <!--begin::Cancel-->--}}
+{{--                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">--}}
+{{--														<i class="bi bi-x fs-2"></i>--}}
+{{--													</span>--}}
+{{--                                                <!--end::Cancel-->--}}
+{{--                                                <!--begin::Remove-->--}}
+{{--                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">--}}
+{{--														<i class="bi bi-x fs-2"></i>--}}
+{{--													</span>--}}
+{{--                                                <!--end::Remove-->--}}
+{{--                                            </div>--}}
+{{--                                            <!--end::Image input-->--}}
+{{--                                            <!--begin::Description-->--}}
+{{--                                            <div class="text-muted fs-7">Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted</div>--}}
+{{--                                            <!--end::Description-->--}}
+{{--                                        </div>--}}
+{{--                                        <!--end::Card body-->--}}
+{{--                                    </div>--}}
+
+{{--                                    <div class="card card-flush py-4">--}}
+{{--                                        <!--begin::Card header-->--}}
+{{--                                        <div class="card-header">--}}
+{{--                                            <!--begin::Card title-->--}}
+{{--                                            <div class="card-title">--}}
+{{--                                                <h2>Yayın Alanı</h2>--}}
+{{--                                            </div>--}}
+{{--                                            <!--end::Card title-->--}}
+{{--                                            <!--begin::Card toolbar-->--}}
+{{--                                            <div class="card-toolbar">--}}
+{{--                                                <div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_product_status"></div>--}}
+{{--                                            </div>--}}
+{{--                                            <!--begin::Card toolbar-->--}}
+{{--                                        </div>--}}
+{{--                                        <div class="card-body pt-0">--}}
+{{--                                            <label class="required form-label">Menu Durum</label>--}}
+{{--                                            <!--begin::Select2-->--}}
+{{--                                            <select name="default" class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Dil Durum Seçimi" id="kt_ecommerce_add_product_status_select">--}}
+{{--                                                <option></option>--}}
+{{--                                                <option value="1" >Yayında</option>--}}
+{{--                                                <option value="0">Pasif</option>--}}
+{{--                                            </select>--}}
+{{--                                            <!--end::Datepicker-->--}}
+{{--                                        </div>--}}
+{{--                                        <!--end::Card body-->--}}
+{{--                                    </div>--}}
                                     <!--end::Pricing-->
                                 </div>
                             </div>
+                            @endfor
+
+
                             <!--end::Tab pane-->
 
                             <!--end::Tab pane-->
@@ -367,35 +364,51 @@
 
 
     <script>
-        $('#kt_ecommerce_add_product_status_select2').on('change',function (){
-            var menuItem = $(this).val();
+        @for($i =0; $i < count($variable); $i++)
 
-            if(menuItem == 1)
-            {
-                $('#menuUrl').css('display','block');
-            }else {
-                $('#menuUrl').css('display','none');
-            }
-        });
+            var urladressblock{{ $variable[$i]['lang'] }} = ".urladress-{{ $variable[$i]['lang'] }}";
+
+            var menuUrl{{ $variable[$i]['lang'] }} = "#menuUrl{{ $variable[$i]['lang'] }}";
+
+            $(urladressblock{{ $variable[$i]['lang'] }}).on('change',function (){
+                var menuItem = $(this).val();
+                if(menuItem == 1)
+                {
+                    $(menuUrl{{ $variable[$i]['lang'] }}).css('display','block');
+                }else {
+                    $(menuUrl{{ $variable[$i]['lang'] }}).css('display','none');
+                }
+            });
+
+        @endfor
+
     </script>
 
     <script>
-        var quill = new Quill('.quill-textarea', {
-            placeholder: 'Slider Açıklama',
-            theme: 'snow',
-            modules: {
-                toolbar: [
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                    [{ 'indent': '-1'}, { 'indent': '+1' }]
-                ]
-            }
-        });
 
-        quill.on('text-change', function(delta, oldDelta, source) {
-            console.log(quill.container.firstChild.innerHTML)
-            $('#detail').val(quill.container.firstChild.innerHTML);
-        });
+        @for($i =0; $i < count($variable); $i++)
+
+
+
+            var quil{{ $variable[$i]['lang'] }} = new Quill(".quill-textarea-{{ $variable[$i]['lang'] }}", {
+                placeholder: 'Slider Açıklama',
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                        [{ 'indent': '-1'}, { 'indent': '+1' }]
+                    ]
+                }
+            });
+
+           quil{{ $variable[$i]['lang'] }}.on('text-change', function(delta, oldDelta, source) {
+                console.log(quil{{ $variable[$i]['lang'] }}.container.firstChild.innerHTML)
+                $("#detail-{{ $variable[$i]['lang'] }}").val(quil{{ $variable[$i]['lang'] }}.container.firstChild.innerHTML);
+            });
+        @endfor
+
+
     </script>
 
 @endsection

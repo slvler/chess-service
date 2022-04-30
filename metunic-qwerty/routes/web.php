@@ -102,6 +102,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 
         Route::get('/slider',[SliderController::class, 'index'])->name('slider');
+        Route::post('/slider/sortable', [SliderController::class, 'sortable'])->name('slider.sortable');
         Route::get('/slider/create',[SliderController::class, 'create'])->name('slider.create');
         Route::post('/slider/store',[SliderController::class, 'store'])->name('slider.store');
         Route::get('/slider/edit/{id}',[SliderController::class, 'edit'])->name('slider.edit');
